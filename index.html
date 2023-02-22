@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/iconsfont.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Explore Indonesia</title>
+</head>
+
+<body>
+    <div class="pop-up">
+        <div class="pop-up__wrapper">
+            <h2>Only today!</h2>
+            <h1>-1%</h1>
+            <div class="close-button">
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <a href="#" class="header-logo icon-explore-indonesia"></a>
+            <div class="menu-body">
+                <ul class="menu-body__list">
+                    <li><a data-goto=".numbers-block" href="#" class="menu__link">By The Numbers</a></li>
+                    <li><a data-goto=".hills-valleys-page" href="#" class="menu__link">Explore Our Secrets</a></li>
+                    <li><a data-goto=".about-page" href="#" class="menu__link">Getting there</a></li>
+                </ul>
+            </div>
+            <ul class="menu__list">
+                <li>
+                    <a data-goto=".destinations-page" href="#" class="menu__link">destinations</a>
+                    <span class="menu__arrow"></span>
+                    <ul class="menu__sub-list">
+                        <li>
+                            <a href="#" class="menu__sub-link">Destination 1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu__sub-link">Destination 2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu__sub-link">Destination 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a data-goto=".experience-page" href="#" class="menu__link">experiences</a></li>
+                <li><a data-goto=".gallery-page" href="#" class="menu__link">gallery</a></li>
+                <li><a data-goto=".about-page" href="#" class="menu__link">about</a></li>
+            </ul>
+            <div class="header__buttons">
+                <div class="search-wrapper">
+                    <div class="icon-search-icon"></div>
+                    <form action="get">
+                        <input id="search-input" type="text" placeholder="Search...">
+                    </form>
+                </div>
+                <div class="menu__icon">
+                    <span></span>
+                </div>
+            </div>
+        </header>
+        <!--! =============FIRST-PAGE (start)============= -->
+        <div class="first-page">
+            <div class="first-page__heading">
+                <h1>Explore Indonesia</h1>
+                <a href="#" class="button">Start travelling</a>
+            </div>
+            <div class="social-links">
+                <a class="social-link" href="https://www.twitter.com/" target="_blank"><span>Tw</span></a>
+                <a class="social-link" href="https://www.linkedin.com" target="_blank"><span>In</span></a>
+                <a class="social-link" href="https://www.facebook.com" target="_blank"><span>Fb</span></a>
+            </div>
+            <div class="structure">
+                <div class="titles">
+                    <div class="title-box title-box-1 _active no-select">
+                        <span>01</span>
+                        <h4>Title here</h4>
+                        <p>Lorem ipsum dolor sit amet et amet ist ame.</p>
+                    </div>
+                    <div class="title-box title-box-2 no-select">
+                        <span>02</span>
+                        <h4>Title here</h4>
+                        <p>Lorem ipsum dolor sit amet et amet ist ame.</p>
+                    </div>
+                    <div class="title-box title-box-3 no-select">
+                        <span>03</span>
+                        <h4>Title here</h4>
+                        <p>Lorem ipsum dolor sit amet et amet ist ame.</p>
+                    </div>
+                </div>
+                <div class="beach-video-wrapper">
+                    <video preload="metadata" poster="./video/beach-video-poster.jpg" id="beach-video"
+                        src="./video/beach-video.mp4"></video>
+                    <div class="play-button main-play-button"></div>
+                </div>
+            </div>
+            <!--? Slider main container -->
+            <div class="video-slider swiper-container">
+                <!--? Additional required wrapper -->
+                <div class="video-slider__wrapper swiper-wrapper">
+                    <!--? Slides -->
+                    <div class="video__slide swiper-slide">
+                        <video autoplay muted loop preload="auto" class="background-video"
+                            src="./video/background-video_1.mp4"></video>
+                    </div>
+                    <div class="video__slide swiper-slide">
+                        <video autoplay muted loop preload="metadata" class="background-video"
+                        src="./video/experience-main-video.mp4"></video>
+                    </div>
+                    <div class="video__slide swiper-slide">
+                        <video autoplay muted loop preload="metadata" class="background-video"
+                            src="./video/background-video_2.mp4"></video>
+                    </div>
+                </div>
+                <div class="slider-details">
+                    <!--? If we need scrollbar -->
+                    <div class="slider-scrollbar swiper-scrollbar"></div>
+                    <!--? If we need pagination -->
+                    <div class="slider-pagination swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <!--! =============FIRST-PAGE (end)============= -->
+        <div class="other-pages">
+            <!--! =============DESTINATION-PAGE (start)============= -->
+            <div class="destinations-page">
+                <div class="all-destinations destination-1">
+                    <div class="destination-image-wrapper">
+                        <img src="./img/destination-1.jpg" alt="Destination Photo">
+                    </div>
+                    <div class="destination-description">
+                        <h3>The walkways of Indonesia spellbind</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce commodo magna et libero
+                            mollis rhoncus.</p>
+                        <a href="#" class="button">Learn More</a>
+                    </div>
+                </div>
+                <div class="all-destinations destination-2">
+                    <div class="destination-image-wrapper">
+                        <img src="./img/destination-2.jpg" alt="Destination Photo">
+                    </div>
+                    <div class="destination-description">
+                        <h3>Perfect beaches exude relaxation and fun</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce commodo magna et libero
+                            mollis rhoncus.</p>
+                        <a href="#" class="button">Learn More</a>
+                    </div>
+                </div>
+                <div class="destinations-page-background">
+                    <div class="destination-background destination-background-1">
+                        <img src="./img/destination-1.jpg" alt="Destination Background">
+                    </div>
+                    <div class="destination-background destination-background-2">
+                        <img src="./img/destination-2.jpg" alt="Destination Background">
+                    </div>
+                </div>
+            </div>
+            <!--! =============DESTINATION-PAGE (end)============= -->
+            <!--! =============EXPLORE-PAGE (start)============= -->
+            <div class="explore-page">
+                <h2>Explore Our Secrets</h2>
+                <div class="explore-slider-container">
+                    <div class="explore-slider swiper-container">
+                        <div class="explore-slider__wrapper swiper-wrapper">
+                            <div class="explore__slide swiper-slide">
+                                <img src="./img/explore-slide-1.jpg" alt="">
+                            </div>
+                            <div class="explore__slide swiper-slide">
+                                <img src="./img/explore-slide-2.jpg" alt="">
+                            </div>
+                            <div class="explore__slide swiper-slide">
+                                <img src="./img/explore-slide-3.jpg" alt="">
+                            </div>
+                            <div class="explore__slide swiper-slide">
+                                <img src="./img/destination-1.jpg" alt="">
+                            </div>
+                            <div class="explore__slide swiper-slide">
+                                <img src="./img/destination-2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="icon-button-left"></div>
+                        <div class="icon-button-right"></div>
+                        <div class="explore-pagination swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="numbers-block">
+                    <h2>By The Numbers</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="numbers-wrapper">
+                        <div class="number-box">
+                            <h3>100+</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.
+                            </p>
+                        </div>
+                        <div class="number-box">
+                            <h3>43,000+</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo.</p>
+                        </div>
+                        <div class="number-box">
+                            <h3>30+</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="explore-page__background">
+                    <img src="./img/explore-page-background.jpg" alt="Explore Page Background">
+                </div>
+            </div>
+            <!--! =============EXPLORE-PAGE (end)============= -->
+            <!--! =============HILLS & VALLEYS (start)============= -->
+            <div class="hills-valleys-page">
+                <div class="hills-valleys__content">
+                    <h3>Our hills and valleys are like nothing you’ve seen.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet magna commodo, tempus
+                        dolor
+                        sit amet, laoreet elit. Donec mauris tortor.</p>
+                    <a href="#" class="button">Learn More</a>
+                </div>
+                <img id="left-top-back" class="no-select" src="./img/background-image-(lines).png" alt="">
+                <img id="right-bottom-back" class="no-select" src="./img/background-image-(lines).png" alt="">
+            </div>
+            <!--! =============HILLS & VALLEYS (end)============= -->
+            <!--! =============EXPERIENCE-PAGE (start)============= -->
+            <div class="experience-page">
+                <h3>Live a life like you wouldn’t imagine, experience a life you wouldn’t expect.</h3>
+                <div class="main-video-wrapper">
+                    <video id="main-video" src="./video/experience-main-video.mp4"
+                        poster="./video/main-video-poster.jpg" preload="metadata"></video>
+                    <div class="play-button main-play-button"></div>
+                </div>
+                <div class="secondary-videos">
+                    <div class="video-box">
+                        <div class="secondary-video-wrapper video-1-wrapper">
+                            <video class="secondary-video" src="./video/experience-video-1.mp4" preload="metadata"
+                                poster="./video/secondary-video1-poster.jpg"></video>
+                            <div class="play-button secondary-play-button"></div>
+                        </div>
+                        <div class="secondary-video-description">
+                            <h5>In The Country</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in
+                                lectus tempus.</p>
+                        </div>
+                    </div>
+                    <div class="video-box">
+                        <div class="secondary-video-wrapper video-2-wrapper">
+                            <video class="secondary-video" src="./video/experience-video-2.mp4" preload="metadata"
+                                poster="./video/secondary-video2-poster.jpg"></video>
+                            <div class="play-button secondary-play-button"></div>
+                        </div>
+                        <div class="secondary-video-description">
+                            <h5>In The Country</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in
+                                lectus tempus.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="exp-back">
+                    <img src="./img/experience-background.jpg" alt="">
+                </div>
+            </div>
+            <!--! =============EXPERIENCE-PAGE (end)============= -->
+            <!--! =============GALLERY (start)============= -->
+            <div class="gallery-page">
+                <h2>Photo Gallery</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus,
+                    eget tincidunt.</p>
+                <div class="gallery-wrapper">
+                    <div class="gallery-grid">
+                        <div class="gallery-image gallery-image_1"><img src="./img/gallery-photo-1.jpg"
+                                alt="Gallery Photo"></div>
+                        <div class="gallery-image gallery-image_2"><img src="./img/gallery-photo-2.jpg"
+                                alt="Gallery Photo"></div>
+                        <div class="gallery-image gallery-image_3"><img src="./img/gallery-photo-3.jpg"
+                                alt="Gallery Photo"></div>
+                        <div class="gallery-image gallery-image_4"><img src="./img/gallery-photo-4.jpg"
+                                alt="Gallery Photo"></div>
+                    </div>
+                    <div class="gallery-flex">
+                        <div class="gallery-image gallery-image_5"><img src="./img/gallery-photo-5.jpg"
+                                alt="Gallery Photo"></div>
+                        <div class="gallery-image gallery-image_6"><img src="./img/gallery-photo-6.jpg"
+                                alt="Gallery Photo"></div>
+                    </div>
+                </div>
+            </div>
+            <!--! =============GALLERY (end)============= -->
+            <!--! =============ABOUT-PAGE (start)============= -->
+            <div class="about-page">
+                <h2>Getting there</h2>
+                <div class="articles-wrapper">
+
+                    <div class="article article-1">
+                        <h4 class="article__number no-select">1</h4>
+                        <h4 class="article__heading">Bookings your flights</h4>
+                        <p class="article__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.</p>
+                        <p class="show-more">Show more</p>
+                    </div>
+
+                    <div class="article article-2">
+                        <h4 class="article__number no-select">2</h4>
+                        <h4 class="article__heading">Choosing your hotel</h4>
+                        <p class="article__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.</p>
+                        <p class="show-more">Show more</p>
+
+                        <div class="sub-article">
+                            <div class="sub-article-video-wrapper">
+                                <video poster="./video/article-video-poster.jpg" preload="metadata"
+                                    src="./video/experience-video-1.mp4"></video>
+                                <div class="play-button secondary-play-button"></div>
+                            </div>
+
+                            <div class="sub-article-video-description">
+                                <h4 class="sub-article-video__heading">Travelling there</h4>
+                                <p class="sub-article-video__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt.</p>
+                            </div>
+                        </div>
+                        <p class="sub-article__show-more">Show more</p>
+                    </div>
+
+                    <div class="article article-3">
+                        <h4 class="article__number no-select">3</h4>
+                        <h4 class="article__heading">Planning your experiences</h4>
+                        <p class="article__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius.</p>
+                        <p class="show-more">Show more</p>
+                        <a href="#" class="button">Learn More</a>
+                    </div>
+
+                </div>
+            </div>
+            <!--! =============ABOUT-PAGE (end)============= -->
+            <footer>
+                <div class="footer-nav">
+                    <a href="#"><img id="footer-logo" src="./img/explore-indonesia (pink).svg" alt=""></a>
+                    <ul class="footer-list">
+                        <li><a class="footer__link" href="#">About</a></li>
+                        <li><a class="footer__link" href="#">Pricing</a></li>
+                        <li><a class="footer__link" href="#">Company</a></li>
+                        <li><a class="footer__link" href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <div class="social-icons icon-facebook-icon"></div>
+                    <div class="social-icons icon-linkedin-icon"></div>
+                    <div class="social-icons icon-google-icon"></div>
+                </div>
+                <h5>Copyright © 2023</h5>
+                <a class="icon-button-up"></a>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
