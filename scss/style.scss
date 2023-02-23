@@ -393,11 +393,12 @@ header {
 
     .swiper-scrollbar-drag {
         cursor: pointer;
-        background-color: #DD2242;
+        // background-color: #DD2242;
+        background-color: black;
         border-radius: 0;
-        width: 5px;
+        width: 6px;
         opacity: 1;
-        left: -1px;
+        left: -2px;
         box-shadow: 0 0 10px 1px black;
         transition: 0.5s;
 
@@ -405,8 +406,8 @@ header {
             background-color: #fc5571;
             border: 2px solid #fff;
             box-shadow: 0 0 10px 3px black;
-            width: 7px;
-            left: -3px;
+            width: 6px;
+            left: -2px;
         }
     }
 }
