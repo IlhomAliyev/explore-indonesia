@@ -174,13 +174,16 @@ if (menuArrows.length > 0) {
 
 //! Иконка
 if (iconMenu) {
-    iconMenu.addEventListener("click", function (e) {
+    iconMenu.addEventListener("click", function () {
         iconMenu.classList.toggle('_active');
         menuBody.classList.toggle('_active');
         let menuBodyWidth = parseInt((getComputedStyle(menuBody)).width);
         let documentWidth = document.documentElement.clientWidth;
         if (menuBodyWidth == documentWidth) {
             document.body.classList.toggle('_lock');
+        }
+        if (searchInput.classList.contains('_active')) {
+            searchInput.classList.remove('_active');
         }
     })
 }
@@ -246,7 +249,6 @@ const exploreSlider = new Swiper('.explore-slider', {
     },
     mousewheel: {
         sensitivity: 1,
-        eventsTarget: '.explore__slide'
     },
     breakpoints: {
         //? при ширине экрана >= 1050px
@@ -334,6 +336,9 @@ const searchButton = document.querySelector('.icon-search-icon');
 const searchInput = document.querySelector('#search-input');
 searchButton.addEventListener("click", function () {
     searchInput.classList.toggle('_active');
+    if (menuBody.classList.contains('_active')) {
+        menuBody.classList.remove('_active');
+    }
 })
 
 //! POP-UP
@@ -354,6 +359,7 @@ window.addEventListener("keyup", (event) => {
     if (popUp && popUp.classList.contains('_active')) {
         if (event.code == 'Escape') {
             popUp.classList.remove('_active');
+            document.body.classList.remove('_lock');
         }
     }
 })
