@@ -337,23 +337,23 @@ searchButton.addEventListener("click", function () {
 })
 
 //! POP-UP
-// const popUp = document.querySelector('.pop-up')
-// const closeButton = document.querySelector('.close-button');
+const popUp = document.querySelector('.pop-up')
+const closeButton = document.querySelector('.close-button');
 
-// document.addEventListener("mouseleave", () => {
-//     popUp.classList.add('_active');
-//     document.body.classList.add('_lock');
-// })
+document.addEventListener("mouseleave", () => {
+    popUp.classList.add('_active');
+    document.body.classList.add('_lock');
+})
 
-// closeButton.addEventListener("click", () => {
-//     popUp.classList.remove('_active');
-//     document.body.classList.remove('_lock');
-// })
+closeButton.addEventListener("click", () => {
+    popUp.classList.remove('_active');
+    document.body.classList.remove('_lock');
+})
 
-// window.addEventListener("keyup", (event) => {
-//     if (popUp && popUp.classList.contains('_active')) {
-//         if (event.code == 'Escape') {
-//             popUp.classList.remove('_active');
-//         }
-//     }
-// })
+window.addEventListener("keyup", (event) => {
+    if (popUp && popUp.classList.contains('_active')) {
+        if (event.code == 'Escape') {
+            popUp.classList.remove('_active');
+        }
+    }
+})
