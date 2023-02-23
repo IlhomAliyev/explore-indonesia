@@ -336,8 +336,9 @@ const searchButton = document.querySelector('.icon-search-icon');
 const searchInput = document.querySelector('#search-input');
 searchButton.addEventListener("click", function () {
     searchInput.classList.toggle('_active');
-    if (menuBody.classList.contains('_active')) {
+    if (menuBody.classList.contains('_active') || document.body.classList.contains('_lock')) {
         menuBody.classList.remove('_active');
+        document.body.classList.remove('_lock');
     }
 })
 
