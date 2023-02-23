@@ -393,14 +393,13 @@ header {
 
     .swiper-scrollbar-drag {
         cursor: pointer;
-        // background-color: #DD2242;
-        background-color: black;
+        background-color: #DD2242;
         border-radius: 0;
         width: 6px;
         opacity: 1;
         left: -2px;
         box-shadow: 0 0 10px 1px black;
-        transition: 0.5s;
+        // transition: 0.3s;
 
         &:is(:hover, :active, :focus) {
             background-color: #fc5571;

@@ -553,21 +553,19 @@ header .menu__sub-list {
   cursor: pointer;
   background-color: #DD2242;
   border-radius: 0;
-  width: 5px;
+  width: 6px;
   opacity: 1;
-  left: -1px;
+  left: -2px;
   -webkit-box-shadow: 0 0 10px 1px black;
           box-shadow: 0 0 10px 1px black;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 .video-slider .swiper-scrollbar-drag:is(:hover, :active, :focus) {
   background-color: #fc5571;
   border: 2px solid #fff;
   -webkit-box-shadow: 0 0 10px 3px black;
           box-shadow: 0 0 10px 3px black;
-  width: 7px;
-  left: -3px;
+  width: 6px;
+  left: -2px;
 }
 
 .first-page__heading {
