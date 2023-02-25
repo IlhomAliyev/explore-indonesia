@@ -374,6 +374,7 @@ header .header__buttons .search-wrapper #search-input {
   width: 300px;
   padding: 10px;
   font-size: 18px;
+  font-family: "DM Sans";
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
