@@ -37,6 +37,10 @@ body._lock {
     overflow: hidden;
 }
 
+body._popUp {
+    overflow: hidden;
+}
+
 .pop-up {
     visibility: none;
     opacity: 0;
@@ -1453,6 +1457,7 @@ header {
             cursor: pointer;
             border-left: 3px solid $grey-color;
             padding-left: 70px;
+            padding-bottom: 10px;
             position: relative;
             height: 100px;
             transition: 0.5s;
@@ -1505,6 +1510,7 @@ header {
             }
 
             &._active {
+                background-color: rgb(240, 240, 240);
                 height: max-content;
                 padding-bottom: calcFluidSizeWidth(30, 95, 375, 1920);
 

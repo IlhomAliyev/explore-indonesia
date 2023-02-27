@@ -58,24 +58,27 @@ function focusOnSearchInput() {
 //! POP-UP
 const popUp = document.querySelector('.pop-up')
 const closeButton = document.querySelector('.close-button');
+let popUpCounter = 0;
 
-document.addEventListener("mouseleave", () => {
-    popUp.classList.add('_active');
-    document.body.classList.add('_lock');
-})
+document.addEventListener("mouseleave", showPopUp);
+closeButton.addEventListener("click", hidePopUp);
+window.addEventListener("keyup", hidePopUp);
 
-closeButton.addEventListener("click", () => {
-    popUp.classList.remove('_active');
-    if (!menuBody.classList.contains('_active')) {
-        document.body.classList.remove('_lock');
+function showPopUp() {
+    if (popUpCounter < 2) {
+        popUp.classList.add('_active');
+        document.body.classList.add('_popUp');
     }
-})
+    popUpCounter++;
+}
 
-window.addEventListener("keyup", (event) => {
+function hidePopUp(event) {
     if (popUp && popUp.classList.contains('_active')) {
+        popUp.classList.remove('_active');
+        document.body.classList.remove('_popUp');
         if (event.code == 'Escape') {
             popUp.classList.remove('_active');
-            document.body.classList.remove('_lock');
+            document.body.classList.remove('_popUp');
         }
     }
-})
+}

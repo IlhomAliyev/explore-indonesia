@@ -8,6 +8,10 @@ export default {
         const header = document.querySelector('header');
         const searchInput = document.querySelector('#search-input');
 
+        if (window.scrollY > 0) {
+            header.classList.add('_scrolled');
+        }
+        
         document.addEventListener('scroll', () => {
             if (window.scrollY > 0) {
                 header.classList.add('_scrolled');

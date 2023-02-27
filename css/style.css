@@ -202,6 +202,10 @@ body._lock {
   overflow: hidden;
 }
 
+body._popUp {
+  overflow: hidden;
+}
+
 .pop-up {
   visibility: none;
   opacity: 0;
@@ -1791,6 +1795,7 @@ header .menu-body .menu-body__list li {
   cursor: pointer;
   border-left: 3px solid #939393;
   padding-left: 70px;
+  padding-bottom: 10px;
   position: relative;
   height: 100px;
   -webkit-transition: 0.5s;
@@ -1836,6 +1841,7 @@ header .menu-body .menu-body__list li {
   display: none;
 }
 .about-page .articles-wrapper .article._active {
+  background-color: rgb(240, 240, 240);
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
