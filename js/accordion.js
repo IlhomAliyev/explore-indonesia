@@ -15,7 +15,11 @@ export default {
             eachArticle.addEventListener("click", openAccordion, { capture: true })
 
             function openAccordion(event) {
-                eachArticle.classList.toggle('_active');
+                if (!eachArticle.classList.contains('_active')) {
+                    eachArticle.classList.add('_active');
+                } else {
+                    eachArticle.classList.remove('_active');
+                }
 
                 if (!eachArticle.classList.contains('_active')) {
                     exactParagraph.innerHTML = exactParagraphShortText;
