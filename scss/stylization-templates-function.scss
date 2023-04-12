@@ -1,180 +1,185 @@
 //! MAIN COLORS
-$prime-color: #DD2242;
+$prime-color: #dd2242;
 $grey-color: #939393;
-$dark-blue: #010A20;
+$dark-blue: #010a20;
 
 //! СТИЛИЗАЦИЯ СКРОЛЛБАРА СТРАНИЦЫ
 //? W3C standard (сейчас только для Firefox)
 * {
-    scrollbar-width: thin;
-    scrollbar-color: $prime-color white;
+  scrollbar-width: thin;
+  scrollbar-color: $prime-color white;
 }
 
 //? для Chrome/Edge/Safari
 
 *::-webkit-scrollbar {
-    height: 12px;
-    width: 12px;
+  height: 12px;
+  width: 12px;
 }
 
 *::-webkit-scrollbar-track {
-    background: white; //? цвет дорожки
+  background: white; //? цвет дорожки
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: $prime-color; //? цвет плашки
-    box-shadow: 0 0 20px 10px black;
+  background-color: $prime-color; //? цвет плашки
+  box-shadow: 0 0 20px 10px black;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-    background-color: #fc5571; //? цвет плашки
-    border: 3px solid white; //? padding вокруг плашки
-    box-shadow: 0 0 20px 15px black;
+  background-color: #fc5571; //? цвет плашки
+  border: 3px solid white; //? padding вокруг плашки
+  box-shadow: 0 0 20px 15px black;
 }
 
 //!======================================
 //! СТИЛИЗАЦИЯ ВЫДЕЛЕННОГО ТЕКСТА
 *::selection {
-    background: #ad1831;
-    color: #ffffff;
+  background: #ad1831;
+  color: #ffffff;
 }
 
 *::-moz-selection {
-    background: #ad1831;
-    color: #ffffff;
+  background: #ad1831;
+  color: #ffffff;
 }
 
 *::-webkit-selection {
-    background: #ad1831;
-    color: #ffffff;
+  background: #ad1831;
+  color: #ffffff;
 }
 
 //!======================================
 
 //! КЛАСС ДЛЯ БЛОКИРОВКИ ВЫДЕЛЕНИЯ ТЕКСТА
 .no-select {
-    -webkit-touch-callout: none; //? iOS Safari
-    -webkit-user-select: none; //? Safari
-    -khtml-user-select: none; //? Konqueror HTML
-    -moz-user-select: none; //? Old versions of Firefox
-    -ms-user-select: none; //? Internet Explorer/Edge
-    user-select: none; //? Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox
+  -webkit-touch-callout: none; //? iOS Safari
+  -webkit-user-select: none; //? Safari
+  -khtml-user-select: none; //? Konqueror HTML
+  -moz-user-select: none; //? Old versions of Firefox
+  -ms-user-select: none; //? Internet Explorer/Edge
+  user-select: none; //? Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox
 }
 
 //!======================================
 
 //! ФУНКЦИЯ АДАПТИВНОГО РАЗМЕРА
 @function calcFluidSizeWidth($s-min, $s-max, $v-min, $v-max) {
-    $k: ($s-max - $s-min)/($v-max - $v-min);
-    $b: $s-min - $k * $v-min;
+  $k: ($s-max - $s-min)/ ($v-max - $v-min);
+  $b: $s-min - $k * $v-min;
 
-    $b: $b * 1px;
+  $b: $b * 1px;
 
-    @return calc(#{$k} * 100vw + #{$b});
+  @return calc(#{$k} * 100vw + #{$b});
 }
 
 @function calcFluidSizeHeight($s-min, $s-max, $v-min, $v-max) {
-    $k: ($s-max - $s-min)/($v-max - $v-min);
-    $b: $s-min - $k * $v-min;
+  $k: ($s-max - $s-min)/ ($v-max - $v-min);
+  $b: $s-min - $k * $v-min;
 
-    $b: $b * 1px;
+  $b: $b * 1px;
 
-    @return calc(#{$k} * 100vh + #{$b});
+  @return calc(#{$k} * 100vh + #{$b});
 }
 //!==================================
 
 //! ===============ШАБЛОНЫ (начало)===============
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin: 0;
 }
 
 h1 {
-    font-family: "Roboto";
-    font-size: calcFluidSizeWidth(58, 120, 375, 1920); //? 120px - 58px
-    line-height: 108%;
-    color: white;
+  font-family: 'Roboto';
+  font-size: calcFluidSizeWidth(58, 120, 375, 1920); //? 120px - 58px
+  line-height: 108%;
+  color: white;
 }
 
 h2 {
-    font-size: calcFluidSizeWidth(40, 60, 375, 1920); //? 60px - 40px
-    line-height: 150%;
+  font-size: calcFluidSizeWidth(40, 60, 375, 1920); //? 60px - 40px
+  line-height: 150%;
 }
 
 h3 {
-    font-size: calcFluidSizeWidth(40, 42, 375, 1920); //? 42px - 40px
-    line-height: 119%;
+  font-size: calcFluidSizeWidth(40, 42, 375, 1920); //? 42px - 40px
+  line-height: 119%;
 }
 
 h4 {
-    font-size: calcFluidSizeWidth(22, 27, 375, 1920); //? 27px - 22px
-    line-height: 156%;
+  font-size: calcFluidSizeWidth(22, 27, 375, 1920); //? 27px - 22px
+  line-height: 156%;
 }
 
 h5 {
-    font-size: calcFluidSizeWidth(22, 18, 375, 1920); //? 18px - 22px
-    line-height: 150%;
+  font-size: calcFluidSizeWidth(22, 18, 375, 1920); //? 18px - 22px
+  line-height: 150%;
 }
 
 p {
-    font-size: calcFluidSizeWidth(16, 18, 375, 1920); //? 18px - 16px
-    line-height: 156%;
+  font-size: calcFluidSizeWidth(16, 18, 375, 1920); //? 18px - 16px
+  line-height: 156%;
 }
 
 a.button {
-    display: block;
-    text-align: center;
-    border-radius: 212px;
-    background-color: $prime-color;
+  display: block;
+  text-align: center;
+  border-radius: 212px;
+  background-color: $prime-color;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(1.1);
     color: white;
-    font-weight: 700;
-    font-size: 20px;
-    transition: 0.5s;
+  }
 
-    &:hover {
-        transform: scale(1.1);
-        color: white;
-    }
-
-    &:active {
-        transform: scale(0.95);
-        transition: 0.1s;
-    }
+  &:active {
+    transform: scale(0.95);
+    transition: 0.1s;
+  }
 }
 
 @mixin play-button($crc-sz, $bgc, $hv-bgc, $arw-sz, $arw-clr, $hv-arw-clr) {
-    cursor: pointer;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: 0.5s;
+
+  width: $crc-sz;
+  height: $crc-sz;
+  background-color: $bgc;
+
+  &::after {
+    content: '';
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
+    transform: translate(-40%, -50%);
     transition: 0.5s;
 
-    width: $crc-sz;
-    height: $crc-sz;
-    background-color: $bgc;
+    border-left: $arw-sz solid $arw-clr;
+    border-top: ($arw-sz / 2) solid transparent;
+    border-bottom: ($arw-sz / 2) solid transparent;
+  }
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    background-color: $hv-bgc;
 
     &::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-40%, -50%);
-        transition: 0.5s;
-
-        border-left: $arw-sz solid $arw-clr;
-        border-top: ($arw-sz / 2) solid transparent;
-        border-bottom: ($arw-sz / 2) solid transparent;
+      border-left-color: $hv-arw-clr;
     }
-
-    &:hover {
-        transform: translate(-50%, -50%) scale(1.1);
-        background-color: $hv-bgc;
-
-        &::after {
-            border-left-color: $hv-arw-clr;
-        }
-    }
+  }
 }
 //! ===============ШАБЛОНЫ (конец)===============
