@@ -1,26 +1,48 @@
-"use strict"
+'use strict';
 
 export default {
-    searchByPage() {
-        //! ПОИСК ПО СТРАНИЦЕ
-        const searchInput = document.querySelector('#search-input');
-        searchInput.addEventListener("input", searchPage);
+  searchByPage() {
+    //   const searchInput = document.querySelector('#search-input');
+    //   searchInput.addEventListener('input', searchPage);
 
-        function searchPage() {
-            //? Получаем значение из текстового поля
-            let searchText = searchInput.value.trim();
+    //   function searchPage() {
+    //     let searchText = searchInput.value.trim().toLowerCase();
 
-            if (searchText !== '') {
-                //? Ищем все элементы на странице, содержащие введенное пользователем слово
-                let allElements = document.body.getElementsByTagName('*');
-                for (let i = 0; i < allElements.length; i++) {
-                    let eachElement = allElements[i];
-                    if (eachElement.textContent.search(searchText) !== -1) {
-                        eachElement.style.backgroundColor = 'yellow'; // Можно выделить найденный элемент желтым цветом
-                        console.log(eachElement);
-                    }
-                }
-            }
-        }
-    }
-}
+    //     if (searchText !== '') {
+    //       let allElements = document.body.querySelectorAll('*');
+
+    //       allElements.forEach((eachElement) => {
+    //         const foundText = eachElement.textContent.search(searchText) !== -1;
+    //         console.log(foundText);
+
+    //         if (foundText) {
+    //           eachElement.style.color = 'yellow';
+    //         }
+    //       });
+    //     }
+    //   }
+    const allElements = document.body.querySelectorAll('*');
+
+    console.log(allElements);
+    
+    allElements.forEach((eachElement) => {
+      let testText = eachElement.innerText
+        .split('\n')
+        .join('')
+        .toLowerCase()
+        .trim();
+
+      // let testText2 = testText.join(' ');
+
+      // console.log(typeof testText);
+      
+      // const foundText = eachElement.textContent.search(searchText) !== -1;
+      // console.log(foundText);
+
+      // if (foundText) {
+      //   eachElement.style.color = 'yellow';
+      // }
+    });
+    
+  },
+};
