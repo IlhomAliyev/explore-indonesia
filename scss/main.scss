@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=DM+Sans:regular,italic,500,500italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+@import './null-style.scss';
+@import './stylization-templates-function.scss';
+
+@import './bodyPC.scss';
+@import './bodyTOUCH.scss';
+
+@import './swiper.scss';
+
+@import './popUp.scss';
+@import './header.scss';
+
+@import './firstPage.scss';
+@import './destination.scss';
+@import './explore.scss';
+@import './hillValleys.scss';
+@import './experience.scss';
+@import './gallery.scss';
+@import './about.scss';
+@import './footer.scss';
+
+//! ФУНКЦИЯ АДАПТИВНОГО РАЗМЕРА
+@function calcFluidSizeWidth($s-min, $s-max, $v-min, $v-max) {
+  $k: ($s-max - $s-min)/ ($v-max - $v-min);
+  $b: $s-min - $k * $v-min;
+
+  $b: $b * 1px;
+
+  @return calc(#{$k} * 100vw + #{$b});
+}
+
+@function calcFluidSizeHeight($s-min, $s-max, $v-min, $v-max) {
+  $k: ($s-max - $s-min)/ ($v-max - $v-min);
+  $b: $s-min - $k * $v-min;
+
+  $b: $b * 1px;
+
+  @return calc(#{$k} * 100vh + #{$b});
+}
+
+//!==================================
+
+body {
+  min-width: 375px;
+  font-family: 'DM Sans';
+  font-size: 16px;
+  color: white;
+  background-color: $prime-color;
+}
+
+body._lock {
+  overflow: hidden;
+}
+
+body._popUp {
+  overflow: hidden;
+}
+
+//! =============OTHER-PAGES=============
+//? OTHER-PAGES - для поднятия на верхний уровень (z-index)
+
+.other-pages {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+}

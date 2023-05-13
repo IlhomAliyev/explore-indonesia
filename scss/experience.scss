@@ -1,0 +1,134 @@
+//! =============EXPERIENCE (start)=============
+
+.experience-page {
+  position: relative;
+  padding: calcFluidSizeWidth(83, 143, 375, 1920)
+    calcFluidSizeWidth(30, 300, 375, 1920)
+    calcFluidSizeWidth(45, 255, 375, 1920); //? 140 - 83 | 300-30 | 255 - 45;
+
+  h3 {
+    text-align: center;
+    margin-bottom: calc(2.7vw + 66px); //? 118 - 76
+  }
+}
+
+.main-video-wrapper {
+  width: calc(48vw + 134px);
+  margin: 0 auto calc(5.5vw + 19px); //? 125 - 40
+  position: relative;
+
+  #main-video {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .main-play-button {
+    @include play-button(
+      calcFluidSizeWidth(67, 96, 375, 1920),
+      $prime-color,
+      white,
+      20px,
+      white,
+      $prime-color
+    );
+  }
+}
+
+.secondary-videos {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  column-gap: calc(5.2vw - 24px); //? 75 - 30
+  row-gap: 40px;
+
+  .video-box {
+    display: flex;
+    flex: 0 1 50%;
+    gap: 40px; //? по макету 42px
+    justify-content: space-between;
+
+    .secondary-video-wrapper {
+      position: relative;
+      flex: 0 0 50%;
+      border-radius: 10px;
+      overflow: hidden;
+
+      .secondary-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .secondary-video-description {
+      flex: 0 1 auto;
+
+      h5 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.secondary-play-button {
+  @include play-button(
+    50px,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    15px,
+    white,
+    $prime-color
+  );
+  backdrop-filter: blur(2px);
+  border: 1px solid white;
+
+  &:hover {
+    border-color: $prime-color;
+  }
+}
+
+.exp-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+
+  img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+  }
+}
+
+@media (max-width: 1051px) {
+  .secondary-videos {
+    width: calc(48vw + 134px);
+    flex-wrap: wrap;
+
+    .video-box {
+      flex: 0 1 100%;
+      flex-wrap: wrap;
+
+      .secondary-video-wrapper {
+        flex: 0 1 100%;
+        height: calcFluidSizeWidth(
+          210,
+          426,
+          375,
+          1050
+        ); //? 426 (1050) - 210 (375)
+      }
+
+      .secondary-video-description {
+        flex: 0 1 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+//! =============EXPERIENCE (end)=============
