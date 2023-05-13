@@ -1,5 +1,5 @@
 'use strict';
-
+//! DEPRECATED
 export default {
   searchByPage() {
     //   const searchInput = document.querySelector('#search-input');
@@ -23,7 +23,7 @@ export default {
     //   }
     const allElements = document.body.querySelectorAll('*');
 
-    console.log(allElements);
+    // console.log(allElements);
     
     allElements.forEach((eachElement) => {
       let testText = eachElement.innerText

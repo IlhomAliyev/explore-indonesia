@@ -1,0 +1,42 @@
+@media (min-width: 1050px) {
+  body._touch {
+    .menu__list > li {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu__link {
+      flex: 1 1 auto;
+    }
+
+    .menu__arrow {
+      display: block;
+      width: 0;
+      height: 0;
+      margin-left: 10px;
+      transition: transform 0.3s ease 0s;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 10px solid white;
+      cursor: pointer;
+
+      &:hover {
+        border-top: 10px solid $prime-color;
+      }
+    }
+
+    .menu__list > li._active {
+      //? действия при клике по стрелке
+      .menu__sub-list {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0px, 0px);
+        pointer-events: all;
+      }
+
+      .menu__arrow {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}

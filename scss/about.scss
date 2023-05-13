@@ -1,0 +1,232 @@
+//! =============ABOUT-PAGE (start)=============
+
+.about-page {
+  padding: calcFluidSizeWidth(50, 120, 375, 1920)
+    calcFluidSizeWidth(30, 300, 375, 1920)
+    calcFluidSizeWidth(150, 120, 375, 1920);
+  background-color: #dce8f2;
+  color: $dark-blue;
+
+  h2 {
+    margin: 0 0 45px;
+  }
+
+  .articles-wrapper {
+    .article {
+      cursor: pointer;
+      border-left: 3px solid $grey-color;
+      padding-left: 70px;
+      padding-bottom: 10px;
+      position: relative;
+      height: 100px;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: rgb(240, 240, 240);
+
+        .article__number {
+          background-color: white;
+          color: $prime-color;
+          line-height: 54px;
+          border: 3px solid $grey-color;
+        }
+
+        .article__heading {
+          color: $prime-color;
+        }
+      }
+
+      &__number {
+        cursor: pointer;
+        position: absolute;
+        left: -31px;
+        top: -10px;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+        background-color: $prime-color;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+      }
+
+      &__heading {
+        cursor: pointer;
+        margin-bottom: calcFluidSizeWidth(15, 30, 375, 1920);
+      }
+
+      &__paragraph {
+        color: $grey-color;
+      }
+
+      .sub-article,
+      .button {
+        display: none;
+      }
+
+      .show-more {
+        display: none;
+      }
+
+      &._active {
+        background-color: rgb(240, 240, 240);
+        height: max-content;
+        padding-bottom: calcFluidSizeWidth(30, 95, 375, 1920);
+
+        .button {
+          display: block;
+          margin-top: 0;
+        }
+
+        .sub-article {
+          display: flex;
+        }
+      }
+    }
+
+    .article-1 {
+      border-radius: 15px 15px 0 0;
+    }
+
+    .article-2 {
+      .sub-article {
+        margin-top: calcFluidSizeWidth(30, 95, 375, 1920);
+        gap: 45px;
+        transition: 0.5s;
+
+        .sub-article-video-wrapper {
+          flex: 0 0 calcFluidSizeWidth(250, 314, 375, 1920);
+          height: calcFluidSizeWidth(166, 208, 375, 1920);
+          position: relative;
+
+          video {
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 0 70%;
+          }
+        }
+
+        .sub-article-video-description {
+          flex: 0 0 30%;
+
+          .sub-article-video__paragraph {
+            color: $grey-color;
+          }
+        }
+      }
+
+      .sub-article__show-more {
+        display: none;
+      }
+    }
+
+    .article-3 {
+      border: 0;
+      border-radius: 0 0 15px 15px;
+
+      .button {
+        margin-top: 17px;
+        width: 210px;
+        height: 64px;
+        line-height: 64px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1051px) {
+  .about-page {
+    h2 {
+      text-align: center;
+    }
+    .articles-wrapper {
+      .article {
+        border: 0;
+        padding: 25px;
+        border-radius: 15px;
+        height: 250px;
+        text-align: center;
+        margin-bottom: 30px;
+
+        &:hover {
+          .article__number {
+            border: 0;
+            line-height: 60px;
+          }
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .article__number {
+          position: static;
+          margin: 0 auto 20px; //? по макету 18px
+        }
+
+        .article-video-wrapper {
+          margin: 0 auto;
+        }
+
+        .button {
+          margin: 0 auto;
+        }
+
+        .show-more {
+          cursor: pointer;
+          display: block;
+          text-align: center;
+          color: $prime-color;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        &._active {
+          height: max-content;
+        }
+      }
+
+      .article-2 {
+        height: 720px;
+
+        .sub-article {
+          display: flex;
+          flex-direction: column;
+
+          .sub-article-video-wrapper {
+            width: 100%;
+          }
+
+          .sub-article-video-description {
+            width: 100%;
+
+            .sub-article-video__heading {
+              display: none;
+            }
+
+            &._active {
+              .sub-article-video__heading {
+                display: block;
+              }
+            }
+          }
+        }
+
+        .sub-article__show-more {
+          display: block;
+          color: $prime-color;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+//! =============ABOUT-PAGE (end)=============
