@@ -1,16 +1,19 @@
 @font-face {
   font-family: 'Explore-Indonesia-TEHNIKUM';
-  src:  url('./../fonts/Explore-Indonesia-TEHNIKUM.eot?8jivvg');
-  src:  url('./../fonts/Explore-Indonesia-TEHNIKUM.eot?8jivvg#iefix') format('embedded-opentype'),
+  src: url('./../fonts/Explore-Indonesia-TEHNIKUM.eot?8jivvg');
+  src: url('./../fonts/Explore-Indonesia-TEHNIKUM.eot?8jivvg#iefix')
+      format('embedded-opentype'),
     url('./../fonts/Explore-Indonesia-TEHNIKUM.ttf?8jivvg') format('truetype'),
     url('./../fonts/Explore-Indonesia-TEHNIKUM.woff?8jivvg') format('woff'),
-    url('./../fonts/Explore-Indonesia-TEHNIKUM.svg?8jivvg#Explore-Indonesia-TEHNIKUM') format('svg');
+    url('./../fonts/Explore-Indonesia-TEHNIKUM.svg?8jivvg#Explore-Indonesia-TEHNIKUM')
+      format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"]::before, [class*=" icon-"]::before {
+[class^='icon-']::before,
+[class*=' icon-']::before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'Explore-Indonesia-TEHNIKUM' !important;
   speak: never;
@@ -26,34 +29,34 @@
 }
 
 .icon-button-left::before {
-  content: "\e900";
+  content: '\e900';
   color: #fff;
 }
 .icon-button-right::before {
-  content: "\e901";
+  content: '\e901';
   color: #fff;
 }
 .icon-button-up::before {
-  content: "\e902";
+  content: '\e902';
   color: #fff;
 }
 .icon-explore-indonesia::before {
-  content: "\e903";
+  content: '\e903';
   color: #fff;
 }
 .icon-facebook-icon::before {
-  content: "\e904";
+  content: '\e904';
   color: #fff;
 }
 .icon-google-icon::before {
-  content: "\e905";
+  content: '\e905';
   color: #fff;
 }
 .icon-linkedin-icon::before {
-  content: "\e906";
+  content: '\e906';
   color: #fff;
 }
 .icon-search-icon::before {
-  content: "\e907";
+  content: '\e907';
   color: #fff;
 }
