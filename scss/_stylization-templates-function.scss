@@ -107,7 +107,7 @@ h3 {
 }
 
 h4 {
-  font-size: calcFluidSizeWidth(22, 27, 375, 1920); //? 27px - 22px
+  font-size: calcFluidSizeWidth(20, 24, 375, 1920); //? 27px - 22px
   line-height: 156%;
 }
 
@@ -117,28 +117,31 @@ h5 {
 }
 
 p {
-  font-size: calcFluidSizeWidth(16, 18, 375, 1920); //? 18px - 16px
+  font-size: calcFluidSizeWidth(14, 16, 375, 1920); //? 18px - 16px
   line-height: 156%;
 }
 
 a.button {
   display: block;
   text-align: center;
+  border: 2px solid transparent;
   border-radius: 212px;
   background-color: $prime-color;
   color: white;
   font-weight: 700;
   font-size: 20px;
-  transition: 0.5s;
+  transition: 300ms;
 
   &:hover {
-    transform: scale(1.1);
-    color: white;
+    border-color: $prime-color;
+    background-color: rgb(240, 240, 240);
+    // transform: scale(1.1);
+    color: $prime-color;
   }
 
   &:active {
-    transform: scale(0.95);
-    transition: 0.1s;
+    transform: scale(0.9);
+    transition: 200ms;
   }
 }
 
@@ -149,7 +152,7 @@ a.button {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  transition: 0.5s;
+  transition: 300ms;
 
   width: $crc-sz;
   height: $crc-sz;
@@ -161,7 +164,7 @@ a.button {
     left: 50%;
     top: 50%;
     transform: translate(-40%, -50%);
-    transition: 0.5s;
+    transition: 300ms;
 
     border-left: $arw-sz solid $arw-clr;
     border-top: ($arw-sz / 2) solid transparent;

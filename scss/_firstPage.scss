@@ -80,7 +80,7 @@
       .title-box {
         cursor: pointer;
         flex: 0 1 auto;
-        transition: 0.5s;
+        transition: 300ms;
         padding: calcFluidSizeHeight(20, 40, 800, 1080)
           calcFluidSizeWidth(35, 70, 1050, 1920); //? 40px (1080) - 20px (800) | 70px (1920) - 35px (1050)
 
@@ -158,7 +158,7 @@
       .button {
         width: 100%;
         height: 60px;
-        line-height: 60px;
+        line-height: 55px;
       }
 
       .social-links {
