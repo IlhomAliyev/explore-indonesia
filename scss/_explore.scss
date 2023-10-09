@@ -56,7 +56,7 @@
     width: calc(0.3vw + 14px); //? 20 - 15
     height: calc(0.3vw + 14px); //? 20 - 15
     background-color: #85a3b2;
-    transition: 0.5s;
+    transition: 300ms;
   }
 
   .swiper-pagination-bullet-active {
@@ -74,7 +74,7 @@
       top: 50%;
       font-size: 24px;
       color: $dark-blue;
-      transition: 0.5s;
+      transition: 300ms;
       z-index: 10;
     }
 
